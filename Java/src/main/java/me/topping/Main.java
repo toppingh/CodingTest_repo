@@ -70,6 +70,11 @@ class Solution {
         // Solution Code
 //        return angle == 180 ? 4 : angle > 90 ? 3 : angle == 90 ? 2 : angle > 0 ? 1 : 0;
     }
+
+    // 11. 양꼬치 가게는 10인분 먹으면 음료수 하나가 서비스일때, 1인분에 12,000원, 음료수는 2,000원이다. n과 k가 매개변수로 주어졌을 때, 양꼬치 n인분과 음료수k개를 먹었다면 총 얼마를 지불해야하는지 return 하는 solution 함수
+    public int solution11(int n, int k) {
+        return 12000 * n + 2000 * k - (n / 10 * 2000);
+    }
 }
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
