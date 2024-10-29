@@ -1,5 +1,7 @@
 package me.topping;
 
+import java.util.stream.IntStream;
+
 class Solution {
 
     // 1. 정수 num1과 num2가 주어질 때 num1에서 num2를 뺀 값을 return 하는 solution 함수
@@ -75,7 +77,32 @@ class Solution {
     public int solution11(int n, int k) {
         return 12000 * n + 2000 * k - (n / 10 * 2000);
     }
-}
+
+    // 12. 정수 n이 주어질 때, n 이하의 짝수를 모두 더한 값을 return 하는 solution 함수
+    // 제한사항 : 0 < n <= 1000
+    public int solution12(int n) {
+        int answer = 0;
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                answer += i;
+            }
+        }
+        return answer;
+    }
+
+    // Solution Code 1
+//    int answer = 0;
+//    for(int i = 2; i <= n; i+=2) {
+//        answer += i;
+//    }
+//    return answer;
+
+    // Solution Code 2
+//    import java.util.stream.IntStream;
+//    return IntStream.rangeClosed(0, n)
+//            .filter(e -> e % 2 == 0)
+//            .sum();
+//}
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
