@@ -102,7 +102,34 @@ class Solution {
 //    return IntStream.rangeClosed(0, n)
 //            .filter(e -> e % 2 == 0)
 //            .sum();
-//}
+
+    // 13. 글자 한 자를 가로 2cm 크기로 적고, 가로로만 적을 때, 축하 문구 message를 적기 위해 필요한 편지지의 최소 가로길이를 return 하는 solution 함수
+    // 제한 : 공백도 문자로 취급, 1 <= message 길이 <= 50, 편지지 여백x, message는 영문 알파벳 대소문자 ~, !, 공백으로만 이루어짐
+    public int solution13(String message) {
+        return message.length() * 2;
+    }
+
+    // 14. 세균이 1시간에 두배 증식한다. 처음 세균의 마리수 n과 경과한 시간 t가 매개변수로 주어질 때 t시간 후 세균의 수를 return하는 solution 함수
+    public int solution14(int n, int t) {
+        //import java.io.*;
+//        return n * (int) Math.pow(2, t);
+
+        // Solution Code
+        return n << t;
+    }
+
+    // 15. 정수가 담긴 배열 array와 정수 n이 매개변수로 주어질 때, array에 n이 몇 개 있는지 return하는 solution 함수
+    public int solution15(int[] array, int n) {
+        int answer = 0;
+        for(int i:array) {
+            answer += (i == n) ? 1 : 0;
+            // Solution
+            // if (i ==n) answer++;
+        }
+        return answer;
+    }
+
+}
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
