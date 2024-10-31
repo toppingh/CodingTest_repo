@@ -123,7 +123,7 @@ class Solution {
         int answer = 0;
         for(int i:array) {
             answer += (i == n) ? 1 : 0;
-            // Solution
+            // Solution Code
             // if (i ==n) answer++;
         }
         return answer;
