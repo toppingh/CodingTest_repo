@@ -1,5 +1,28 @@
 package me.topping.AIReport;
 
+// Solution Code
+import java.util.Arrays;
+
+class BestSet2 {
+    public int[] BestSet(int n, int s) {
+        int[] answer = null;
+        if (n > s) {
+            answer = new int[1];
+            answer[0] = -1;
+        } else {
+            answer = new int[n];
+            int i = 0;
+            while(s > 0) {
+                answer[(i % n)]++;
+                i++;
+                s--;
+            }
+        }
+        Arrays.sort(answer);
+        return answer;
+    }
+}
+
 class Solution {
     public int[] solution(int n, int s) {
         if (s / n == 0) {
@@ -27,7 +50,10 @@ class Solution {
 public class BestSet {
     public static void main(String[] args) {
         Solution s = new Solution();
+        BestSet2 bs = new BestSet2();
+
         s.solution(2, 7);
+        bs.BestSet(3, 10);
 
     }
 }
