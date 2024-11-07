@@ -13,6 +13,15 @@ class Solution1 {
         Collections.sort(list, Collections.reverseOrder());
 
         return list.get(0) * list.get(1);
+
+        // Solution Code
+//        Arrays.sort(numbers);
+//        return numbers[numbers.length - 1] * numbers[numbers.length - 2];
+
+        // Solution Code 2
+//        numbers = Arrays.stream(numbers).boxed().sorted(Comparator.reverseOrder()).mapToInt(Integer::intValue).toArray();
+//        int answer = numbers[0] * numbers[1];
+//        return answer;
     }
 }
 
