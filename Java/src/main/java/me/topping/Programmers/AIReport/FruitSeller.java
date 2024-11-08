@@ -1,4 +1,4 @@
-package me.topping.AIReport;
+package me.topping.Programmers.AIReport;
 
 import java.util.Arrays;
 import java.util.Collections;

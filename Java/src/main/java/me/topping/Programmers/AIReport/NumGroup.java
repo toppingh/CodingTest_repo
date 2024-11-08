@@ -1,4 +1,4 @@
-package me.topping.AIReport;
+package me.topping.Programmers.AIReport;
 
 public class NumGroup {
     public String solution(String X, String Y) {

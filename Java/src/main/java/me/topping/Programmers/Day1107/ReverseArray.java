@@ -1,4 +1,4 @@
-package me.topping.Day1107;
+package me.topping.Programmers.Day1107;
 
 // Title : 배열 뒤집기
 // Q. 정수가 들어있는 배열 num_list가 매개변수로 주어질때, num_list의 원소 순서를 거꾸로 뒤집은 배열을 return하는 solution 함수

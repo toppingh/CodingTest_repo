@@ -1,4 +1,4 @@
-package me.topping.AIReport;
+package me.topping.Programmers.AIReport;
 
 // Solution Code
 import java.util.Arrays;

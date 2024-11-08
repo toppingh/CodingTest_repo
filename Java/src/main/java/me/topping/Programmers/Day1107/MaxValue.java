@@ -1,4 +1,4 @@
-package me.topping.Day1107;
+package me.topping.Programmers.Day1107;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -15,6 +15,7 @@ class Solution1 {
         return list.get(0) * list.get(1);
 
         // Solution Code
+
 //        Arrays.sort(numbers);
 //        return numbers[numbers.length - 1] * numbers[numbers.length - 2];
 
