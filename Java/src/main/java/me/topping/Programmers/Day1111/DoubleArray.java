@@ -3,6 +3,8 @@ package me.topping.Programmers.Day1111;
 // Title : 배열 두 배 만들기
 // Q. 정수 배열 numbers가 매개변수로 주어질 때, numbers의 각 원소에 두 배한 원소를 가진 배열 return하는 함수
 
+import java.util.Arrays;
+
 class doubleArr {
     int[] arr(int[] numbers) {
         int[] answer = new int[numbers.length];
@@ -12,6 +14,15 @@ class doubleArr {
         }
 
         return answer;
+    }
+}
+
+// Solution Code
+class DoubleArr {
+    int[] arr(int[] numbers) {
+        return Arrays.stream(numbers)
+                .map(n -> n * 2)
+                .toArray();
     }
 }
 
