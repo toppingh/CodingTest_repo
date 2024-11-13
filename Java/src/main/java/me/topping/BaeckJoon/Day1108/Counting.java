@@ -1,4 +1,4 @@
-package me.topping.BaekJoon.Day1108;
+package me.topping.BaeckJoon.Day1108;
 
 // Title : 개수 세기
 // Q. 총 N개의 정수가 주어졌을때 v가 몇 개인지 구하는 프로그램

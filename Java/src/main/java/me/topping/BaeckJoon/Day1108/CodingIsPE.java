@@ -1,4 +1,4 @@
-package me.topping.BaekJoon.Day1108;
+package me.topping.BaeckJoon.Day1108;
 
 // Title : 코딩은 체육과목입니다.
 // Q. int 앞에 long을 하나씩 더 붙일 때마다 저장할 수 있는 공간이 늘어난다. N 바이트 정수까지 저장할 수 있다고 생각해 칠판에 쓴 정수 자료형의 이름은?

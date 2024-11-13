@@ -1,4 +1,4 @@
-package me.topping.Day1112;
+package me.topping.BaeckJoon.Day1112;
 
 // Title : 공 넣기
 // Q. 1번부터 N번까지 번호가 매겨져 있는 여러 개의 바구니가 총 N개 있다. 가장 처음 바구니에는 공이 들어가지 않고, 바구니에 공을 1개만 넣을 수 있다.
