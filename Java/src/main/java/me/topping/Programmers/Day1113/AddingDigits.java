@@ -1,5 +1,9 @@
 package me.topping.Programmers.Day1113;
 
+// Title : 자릿수 더하기
+// Q. 정수 n이 매개변수로 주어질 때 n의 각 자리 숫자의 합을 return 하는 solution 함수
+// 제한. 0 <= n <= 1,000,000
+
 class Solution2 {
     int solution(int n) {
         int answer = 0;
