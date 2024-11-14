@@ -4,8 +4,8 @@ package me.topping.Programmers.Day1114;
 // Q. 정수 n이 매개변수로 주어질 때, n 이하의 홀수가 오름차순으로 담긴 배열 return 하는 solution 함수
 // 제한. 1 <= n <= 100
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.IntStream;
 
 class Solution1 {
     int[] solution(int n) {
@@ -19,8 +19,19 @@ class Solution1 {
     }
 }
 
+// Solution Code
+class Solution1_1 {
+    int[] solution1(int n) {
+        return IntStream.rangeClosed(0, n).filter(i -> i % 2 == 0).toArray();
+    }
+}
+
 public class HateEven {
     public static void main(String[] args) {
 
+        Solution1 s1 = new Solution1();
+
+        System.out.println(Arrays.toString(s1.solution(10)));
+        System.out.println(Arrays.toString(s1.solution(15)));
     }
 }
