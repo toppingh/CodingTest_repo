@@ -9,6 +9,7 @@ class Solution2 {
     int solution(int[] array) {
         Arrays.sort(array);
         return array[array.length / 2];
+        // return array[array.length >> 2]; => Solution Code
     }
 }
 
