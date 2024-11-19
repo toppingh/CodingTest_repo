@@ -6,6 +6,12 @@ package me.topping.Programmers.Day1119;
 
 class Solution2 {
     int solution(int slice, int n) {
+        // Solution Code1
+//        return n % slice > 0 ? n/slice + 1 : n /slice;
+
+        // Solution Code2
+//        return (n + slice - 1) / slice;
+
         int cnt = 1;
         while (slice * cnt < n) ++cnt;
         return cnt;
