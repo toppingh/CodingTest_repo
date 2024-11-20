@@ -7,11 +7,20 @@ class Solution2 {
         int evenCnt = 0;
         int oddCnt = 0;
 
+        // Solution Code
+//        int[] answer = new int[2];
+//
+//        for (int i = 0; i < num_list.length; i++) {
+//            answer[num_list[i] % 2]++; -> num_list의 i번째 원소가 홀수이면 answer[0], 짝수이면 answer[1]을 ++
+//        }
+//        return answer;
+
         for (int i = 0; i < num_list.length; i++) {
             if (num_list[i] % 2 == 0) evenCnt++;
             if (num_list[i] % 2 != 0) oddCnt++;
         }
         return new int[]{evenCnt, oddCnt};
+
     }
 }
 
