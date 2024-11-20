@@ -18,5 +18,10 @@ public class PrintRightTriangle {
             }
             System.out.println();
         }
+
+        // Solution Code -> repeat() : String 문자열을 파라미터의 주어진 횟수만큼 반복하는 String 메서드
+        for (int i = 1; i <= n; i++) {
+            System.out.println("*".repeat(i));
+        }
     }
 }
