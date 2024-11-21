@@ -12,6 +12,9 @@ class Solution2 {
             answer += hp % 5 % 2 == 0 ? 2 : 1;
         }
         return answer;
+
+        // Solution Code
+        // return hp / 5 + (hp % 5 / 3) + hp % 5 % 3;
     }
  }
 
