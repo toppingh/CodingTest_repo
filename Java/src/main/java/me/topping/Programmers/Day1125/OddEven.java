@@ -11,5 +11,8 @@ public class OddEven {
         int n = sc.nextInt();
 
         System.out.println(n % 2 == 0 ? n + " is even" : n + " is odd");
+
+        // Solution code
+        System.out.println(n + " is " + (n % 2 == 0? "even" : "odd"));
     }
 }
