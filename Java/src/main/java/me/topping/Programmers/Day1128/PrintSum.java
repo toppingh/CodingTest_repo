@@ -13,5 +13,8 @@ public class PrintSum {
         int b = sc.nextInt();
 
         System.out.print(a + " + " + b + " = " + (a + b));
+
+        // Solution Code
+        System.out.printf("%d + %d = %d", a, b, a + b);
     }
 }
