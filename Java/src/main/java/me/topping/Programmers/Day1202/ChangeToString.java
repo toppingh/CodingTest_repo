@@ -5,6 +5,9 @@ package me.topping.Programmers.Day1202;
 
 class Solution2 {
     String solution(String[] arr) {
+        // Solution Code - join() : 구분 기호를 사용해 모든 문자열 결합
+        // return String.join("", arr);
+
         String answer = "";
 
         for (int i = 0; i < arr.length; i++) {
