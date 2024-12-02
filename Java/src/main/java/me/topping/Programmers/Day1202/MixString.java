@@ -15,5 +15,23 @@ class Solution1 {
     }
 }
 
+class SolutionCode {
+    String solution1(String str1, String str2) {
+        char[] ch1 = str1.toCharArray();
+        char[] ch2 = str2.toCharArray();
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < ch1.length; i++) {
+            sb.append(ch1[i]).append(ch2[i]);
+        }
+
+        return  sb.toString();
+    }
+}
+
 public class MixString {
+    public static void main(String[] args) {
+        Solution1 s1 = new Solution1();
+        System.out.println(s1.solution("aaa", "bbb"));
+    }
 }
