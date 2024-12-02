@@ -13,6 +13,13 @@ class Solution4 {
         int ib = Integer.parseInt(sb + sa);
 
         return ia >= ib ? ia : ib;
+
+        // Solution Code1 : 공백 사용하기
+//        int ab = Integer.parseInt("" + a + b);
+//        int ba = Integer.parseInt("" + b + a);
+
+        // Solution Code2 : 공백과 Math.max 사용하기
+//        return Math.max(Integer.parseInt(a + "" + b), Integer.parseInt(b + "" + a));
     }
 }
 
