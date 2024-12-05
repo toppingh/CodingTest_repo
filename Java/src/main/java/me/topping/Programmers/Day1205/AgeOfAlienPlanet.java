@@ -15,6 +15,19 @@ class Solution2 {
     }
 }
 
+class SolutionCode1 {
+    String solution1(int age) {
+        StringBuilder sb = new StringBuilder();
+
+        while (age > 0) {
+            sb.insert(0, (char) ((age % 10) + (int)'a'));
+            age /= 10;
+        }
+
+        return sb.toString();
+    }
+}
+
 public class AgeOfAlienPlanet {
     public static void main(String[] args) {
         Solution2 s2 = new Solution2();
