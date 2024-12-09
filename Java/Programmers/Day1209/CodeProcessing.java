@@ -24,6 +24,24 @@ class Solution1 {
     }
 }
 
+// Solution Code
+class SolutionCode1 {
+    String solution (String code) {
+        int mode = 0;
+        StringBuilder ret = new StringBuilder();
+
+        for (int i = 0; i < code.length(); i++) {
+            char c = code.charAt(i);
+            if (c == '1') {
+                mode = mode == 0 ? 1 : 0;
+                continue;
+            }
+            if (i % 2 == mode) ret.append(c);
+        }
+        return ret.length() == 0 ? "EMPTY" : ret.toString();
+    }
+}
+
 public class CodeProcessing {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
