@@ -20,6 +20,28 @@ class Solution4 {
     }
 }
 
+// 솔루션 코드 -> 오버라이딩
+class SolutionCode4 {
+    int solution (int a, int b, int c) {
+        int answer = 1;
+        int cnt = 1;
+
+        if (a == b || b == c || c == a) cnt++; // 두 숫자만 같을 경우 1 증가
+        if (a == b && b == c) cnt++; // 모두 같을 경우 1 증가 (총 2 증가)
+
+        for (int i = 1; i <= cnt; i++) { // cnt 값에 따른 계산 반복
+            answer *= (pow(a, i) + pow(b, i) + pow(c, i));
+        }
+
+        return answer;
+    }
+
+    private int pow(int a, int b) { // 재귀적 제곱 계산 메서드
+        if (b == 0) return 1;
+        return a * pow(a, b - 1); // a를 b - 1번 곱함
+    }
+}
+
 public class DiceGame2 {
     public static void main(String[] args) {
         Solution4 s4 = new Solution4();
