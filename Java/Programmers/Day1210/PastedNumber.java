@@ -16,10 +16,33 @@ class Solution1 {
     }
 }
 
+// Solution Code1 - 10을 곱해서 int형 문자열 활용
+class SolutionCode1 {
+    int solution(int[] num_list) {
+        int even = 0;
+        int odd = 0;
+
+        for (int i : num_list) {
+            if (i % 2 == 0) {
+                even *= 10;
+                even += i;
+            } else {
+                odd *= 10;
+                odd += i;
+            }
+        }
+        return even + odd;
+    }
+}
+
 public class PastedNumber {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(s1.solution(new int[]{3, 4, 5, 2, 1}));
         System.out.println(s1.solution(new int[]{5, 7, 8, 3}));
+        System.out.println(sc1.solution(new int[]{3, 4, 5, 2, 1}));
+        System.out.println(sc1.solution(new int[]{5, 7, 8, 3}));
     }
 }
