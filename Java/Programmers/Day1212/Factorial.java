@@ -21,12 +21,28 @@ class Solution3 {
     }
 }
 
+// SolutionCode - While문으로 바꿔보기
+class SolutionCode3 {
+    int solution (int n) {
+        int answer = 1;
+
+        int i = 1;
+        while (i <= n) {
+            answer++;
+            i *= answer;
+        }
+        return answer - 1;
+    }
+}
+
 public class Factorial {
     public static void main(String[] args) {
         Solution3 s3 = new Solution3();
-        System.out.println(s3.solution(1));
-        System.out.println(s3.solution(3));
+        SolutionCode3 sc3 = new SolutionCode3();
+
         System.out.println(s3.solution(3628800));
         System.out.println(s3.solution(7));
+        System.out.println(sc3.solution(3628800));
+        System.out.println(sc3.solution(7));
     }
 }
