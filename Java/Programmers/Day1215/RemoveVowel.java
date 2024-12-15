@@ -18,11 +18,21 @@ class Solution1 {
     }
 }
 
+// SolutionCode - 정규표현식 활용
+class SolutionCode1 {
+    String solution(String my_string) {
+        return my_string.replaceAll("[aeiou]", "");
+    }
+}
 
 public class RemoveVowel {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(s1.solution("bus"));
         System.out.println(s1.solution("nice to meet you"));
+        System.out.println(sc1.solution("bus"));
+        System.out.println(sc1.solution("nice to meet you"));
     }
 }
