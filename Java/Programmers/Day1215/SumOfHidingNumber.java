@@ -15,6 +15,28 @@ class Solution3 {
     }
 }
 
+// SolutionCode - 1. 아스키코드 활용  2. replaceAll 예외처리
+class SolutionCode3 {
+    int solution (String my_string) {
+        int answer = 0;
+
+        // 1. 아스키 코드 활용 방법
+        for (char c : my_string.toCharArray()) {
+            if (c >= '0' && c <= '9') {
+                answer += c - '0';
+            }
+        }
+
+        // 2. replaceAll 예외처리 방법
+        String str = my_string.replaceAll("[^0-9]", "");
+        for (char ch : str.toCharArray()) {
+            answer += Character.getNumericValue(ch);
+        }
+
+        return answer;
+    }
+}
+
 public class SumOfHidingNumber {
     public static void main(String[] args) {
         Solution3 s3 = new Solution3();
