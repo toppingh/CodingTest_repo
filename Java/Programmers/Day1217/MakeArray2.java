@@ -32,11 +32,32 @@ class Solution2 {
     }
 }
 
+// SolutionCode -> 2진법 활용
+class SolutionCode2 {
+    int[] solution (int l, int r) {
+        ArrayList<Integer> list = new ArrayList<>(); // 결과 저장 리스트 초기화
+
+        for (int i = 1; i < 64; i++) { // 1부터 63까지 반복 (이진수로 표현할 수 있는 숫자는 최대 6자리까지 필요, 111111 = 63)
+            int num = Integer.parseInt(Integer.toBinaryString(i)) * 5; // i를 이진 문자열로 변환해 정수로 바꾼 후 * 5 값을 num에 저장
+
+            if (l <= num && num <= r) { // l <= num <= r 이면 리스트에 추가
+                list.add(num);
+            }
+
+        }
+        return list.isEmpty() ? new int[] {-1} : list.stream().mapToInt(i -> i).toArray();
+    }
+}
 
 public class MakeArray2 {
     public static void main(String[] args) {
         Solution2 s2 = new Solution2();
+        SolutionCode2 sc2 = new SolutionCode2();
+
         System.out.println(Arrays.toString(s2.solution(5, 555)));
         System.out.println(Arrays.toString(s2.solution(10, 20)));
+        System.out.println();
+        System.out.println(Arrays.toString(sc2.solution(5, 555)));
+        System.out.println(Arrays.toString(sc2.solution(10, 20)));
     }
 }
