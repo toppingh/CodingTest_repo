@@ -74,13 +74,37 @@ class Solution6 {
     }
 }
 
+// SolutionCode -> 정렬 활용
+class SolutionCode6 {
+    int solution (int a, int b, int c, int d) {
+        int[] arr = {a, b, c, d};
+        Arrays.sort(arr);
+
+        if (arr[0] == arr[3]) return 1111 * arr[3];
+        else if (arr[0] == arr[2] || arr[1] == arr[3]) return (int) Math.pow(10 * arr[1] + (arr[0] + arr[3] - arr[1]), 2);
+        else if (arr[0] == arr[1] && arr[2] == arr[3]) return (arr[0] + arr[3]) * (arr[3] - arr[0]);
+        else if (arr[0] == arr[1]) return arr[2] * arr[3];
+        else if (arr[1] == arr[2]) return arr[0] * arr[3];
+        else if (arr[2] == arr[3]) return arr[0] * arr[1];
+        else return arr[0];
+    }
+}
+
 public class DiceGame3 {
     public static void main(String[] args) {
         Solution6 s6 = new Solution6();
+        SolutionCode6 sc6 = new SolutionCode6();
         System.out.println(s6.solution(2, 2, 2, 2));
         System.out.println(s6.solution(4, 1, 4, 4));
         System.out.println(s6.solution(6, 3, 3, 6));
         System.out.println(s6.solution(2, 5, 2, 6));
         System.out.println(s6.solution(6, 4, 2, 5));
+        System.out.println();
+
+        System.out.println(sc6.solution(2, 2, 2, 2));
+        System.out.println(sc6.solution(4, 1, 4, 4));
+        System.out.println(sc6.solution(6, 3, 3, 6));
+        System.out.println(sc6.solution(2, 5, 2, 6));
+        System.out.println(sc6.solution(6, 4, 2, 5));
     }
 }
