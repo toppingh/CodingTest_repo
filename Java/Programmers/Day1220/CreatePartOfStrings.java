@@ -7,13 +7,13 @@ package Java.Programmers.Day1220;
 
 class Solution4 {
     String solution(String[] my_strings, int[][] parts) {
-        String str = "";
+        StringBuilder str = new StringBuilder();
 
         for (int i = 0; i < my_strings.length; i++) {
-            str += my_strings[i].substring(parts[i][0], parts[i][1] + 1);
+            str.append(my_strings[i], parts[i][0], parts[i][1] + 1);
             System.out.println(my_strings[i].substring(parts[i][0], parts[i][1] + 1));
         }
-        return str;
+        return str.toString();
     }
 }
 
