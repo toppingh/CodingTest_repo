@@ -14,11 +14,26 @@ class Solution1 {
     }
 }
 
+// SolutionCode1 -> indexOf 활용
+class SolutionCode1 {
+    int solution (int num, int k) {
+        // "-"를 추가해 인덱스를 1부터 카운트
+        return ("-" + num).indexOf(String.valueOf(k));
+    }
+}
+
 public class FindNumber {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        Solution1 sc1 = new Solution1();
+
         System.out.println(s1.solution(29183, 1));
         System.out.println(s1.solution(232443, 4));
         System.out.println(s1.solution(123456, 7));
+        System.out.println();
+
+        System.out.println(sc1.solution(29183, 1));
+        System.out.println(sc1.solution(232443, 4));
+        System.out.println(sc1.solution(123456, 7));
     }
 }
