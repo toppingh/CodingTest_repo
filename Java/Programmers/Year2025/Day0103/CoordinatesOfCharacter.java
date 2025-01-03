@@ -1,4 +1,4 @@
-package Java.Programmers.Year2025;
+package Java.Programmers.Year2025.Day0103;
 
 // Title : 캐릭터의 좌표
 // Q. up을 누르면 [0, 1], down을 누르면 [0, -1], left를 누르면 [-1, 0], right를 누르면 [1, 0]이다.
