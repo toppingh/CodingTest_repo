@@ -17,11 +17,28 @@ class Solution3 {
     }
 }
 
+// SolutionCode -> reverse() 활용
+class SolutionCode3 {
+    String solution(String my_string, int s, int e) {
+        StringBuilder sb = new StringBuilder(my_string.substring(s, e + 1));
+        sb.reverse();
+        return my_string.substring(0, s) + sb + my_string.substring(e + 1);
+    }
+}
+
 public class ReverseString {
     public static void main(String[] args) {
         Solution3 s3 = new Solution3();
+        SolutionCode3 sc3 = new SolutionCode3();
+
         System.out.println(s3.solution("Progra21Sremm3", 6, 12));
         System.out.println(s3.solution("Stanley1yelnatS", 4, 10));
         System.out.println(s3.solution("49gh43jOIQvkSH", 5, 5));
+        System.out.println();
+
+        System.out.println(sc3.solution("Progra21Sremm3", 6, 12));
+        System.out.println(sc3.solution("Stanley1yelnatS", 4, 10));
+        System.out.println(sc3.solution("49gh43jOIQvkSH", 5, 5));
+
     }
 }
