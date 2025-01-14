@@ -18,11 +18,27 @@ class Solution1 {
     }
 }
 
+// SolutionCode1 -> 작은 값 활용하기
+class SolutionCode1 {
+    int solution(int[] sides) {
+        int answer = 0;
+        answer += Math.min(sides[0], sides[1]) * 2 - 1;
+
+        return answer;
+    }
+}
+
 public class CaseOfTriangle {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(s1.solution(new int[] {1, 2}));
         System.out.println(s1.solution(new int[] {3, 6}));
         System.out.println(s1.solution(new int[] {11, 7}));
+        System.out.println();
+        System.out.println(sc1.solution(new int[] {1, 2}));
+        System.out.println(sc1.solution(new int[] {3, 6}));
+        System.out.println(sc1.solution(new int[] {11, 7}));
     }
 }
