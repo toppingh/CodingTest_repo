@@ -18,10 +18,22 @@ class Solution1 {
     }
 }
 
+// SolutionCode1 -> copyOfRange 메서드 활용
+class SolutionCode1 {
+    int[] solution (int[] num_list, int n) {
+        return Arrays.copyOfRange(num_list, n - 1, num_list.length);
+    }
+}
+
 public class FromNth {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(Arrays.toString(s1.solution(new int[]{2, 1, 6}, 3)));
         System.out.println(Arrays.toString(s1.solution(new int[]{5, 2, 1, 7, 5}, 2)));
+        System.out.println();
+        System.out.println(Arrays.toString(sc1.solution(new int[]{2, 1, 6}, 3)));
+        System.out.println(Arrays.toString(sc1.solution(new int[]{5, 2, 1, 7, 5}, 2)));
     }
 }
