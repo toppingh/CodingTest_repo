@@ -20,9 +20,24 @@ class Solution3 {
     }
 }
 
+// SolutionCode -> split 활용
+class SolutionCode3 {
+    String[] solution (String[] todo_list, boolean[] finished) {
+        String str = "";
+        for (int i = 0; i < finished.length; i++) {
+            str = !finished[i] ? str + todo_list[i] + "," : str;
+        }
+        return str.split(",");
+    }
+}
+
 public class TodoList {
     public static void main(String[] args) {
         Solution3 s3 = new Solution3();
+        SolutionCode3 sc3 = new SolutionCode3();
+
         System.out.println(Arrays.toString(s3.solution(new String[] {"problemsolving", "practiceguitar", "swim", "studygraph"}, new boolean[] {true, false, true, false})));
+        System.out.println();
+        System.out.println(Arrays.toString(sc3.solution(new String[] {"problemsolving", "practiceguitar", "swim", "studygraph"}, new boolean[] {true, false, true, false})));
     }
 }
