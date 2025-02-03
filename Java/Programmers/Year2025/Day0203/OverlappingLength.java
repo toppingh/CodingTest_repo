@@ -22,11 +22,34 @@ class Solution2 {
     }
 }
 
+// SolutionCode -> 배열 생성 없이 풀이
+class SolutionCode2 {
+    int solution (int[][] lines) {
+        int answer = 0;
+        for (int i = -100; i < 100; i++) {
+            int line = 0;
+
+            if (lines[0][0] <= i && lines[0][1] > i) line++;
+            if (lines[1][0] <= i && lines[1][1] > i) line++;
+            if (lines[2][0] <= i && lines[2][1] > i) line++;
+
+            if (line > 1) answer++;
+        }
+        return answer;
+    }
+}
+
 public class OverlappingLength {
     public static void main(String[] args) {
         Solution2 s2 = new Solution2();
+        SolutionCode2 sc2 = new SolutionCode2();
+
         System.out.println(s2.solution(new int[][] {{0, 1}, {2, 5}, {3, 9}}));
         System.out.println(s2.solution(new int[][] {{-1, 1}, {1, 3}, {3, 9}}));
         System.out.println(s2.solution(new int[][] {{0, 5}, {3, 9}, {1, 10}}));
+        System.out.println();
+        System.out.println(sc2.solution(new int[][] {{0, 1}, {2, 5}, {3, 9}}));
+        System.out.println(sc2.solution(new int[][] {{-1, 1}, {1, 3}, {3, 9}}));
+        System.out.println(sc2.solution(new int[][] {{0, 5}, {3, 9}, {1, 10}}));
     }
 }
