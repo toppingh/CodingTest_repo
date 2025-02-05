@@ -15,7 +15,7 @@ class Solution1 {
     }
 }
 
-public class SequenceConversion {
+public class SequenceConversion1 {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
         System.out.println(Arrays.toString(s1.solution(new int[] {1, 2, 3, 100, 99, 98})));
