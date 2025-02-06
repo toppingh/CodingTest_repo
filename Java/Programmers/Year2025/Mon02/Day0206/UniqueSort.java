@@ -6,7 +6,7 @@ package Java.Programmers.Year2025.Mon02.Day0206;
 
 import java.util.Arrays;
 
-class Solution4 {
+class Solution1 {
     int[] solution (int[] numlist, int n) {
        Arrays.sort(numlist);
 
@@ -25,8 +25,8 @@ class Solution4 {
 
 public class UniqueSort {
     public static void main(String[] args) {
-        Solution4 s4 = new Solution4();
-        System.out.println(Arrays.toString(s4.solution(new int[] {1, 2, 3, 4, 5, 6}, 4)));
-        System.out.println(Arrays.toString(s4.solution(new int[] {10000, 20, 36, 47, 40, 6, 10, 7000}, 30)));
+        Solution1 s1 = new Solution1();
+        System.out.println(Arrays.toString(s1.solution(new int[] {1, 2, 3, 4, 5, 6}, 4)));
+        System.out.println(Arrays.toString(s1.solution(new int[] {10000, 20, 36, 47, 40, 6, 10, 7000}, 30)));
     }
 }
