@@ -19,11 +19,31 @@ class Solution7 {
     }
 }
 
+// SolutionCode7 -> "" 활용
+class SolutionCode7 {
+    int solution (int i, int j, int k) {
+        String str = "";
+
+        for (int n = i; n <= j; n++) {
+            str += n + "";
+            System.out.println(str);
+        }
+
+        return str.length() - str.replace(k + "", "").length();
+    }
+}
+
 public class CountOfK {
     public static void main(String[] args) {
         Solution7 s7 = new Solution7();
+        SolutionCode7 sc7 = new SolutionCode7();
+
         System.out.println(s7.solution(1, 13, 1));
         System.out.println(s7.solution(10, 50, 5));
         System.out.println(s7.solution(3, 10, 2));
+        System.out.println();
+        System.out.println(sc7.solution(1, 13, 1));
+        System.out.println(sc7.solution(10, 50, 5));
+        System.out.println(sc7.solution(3, 10, 2));
     }
 }
