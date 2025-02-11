@@ -3,8 +3,6 @@ package Java.Programmers.Year2025.Mon02.Day0210;
 // Title : A로 B만들기
 // Q. before와 after가 매개변수로 주어질 때 before 순서를 바꿔 after를 만들 수 있으면 1, 없으면 0을 return하는 solution 함수
 
-import java.util.Arrays;
-
 class Solution6 {
     int solution (String before, String after) {
         int[] cnt = new int[26];
