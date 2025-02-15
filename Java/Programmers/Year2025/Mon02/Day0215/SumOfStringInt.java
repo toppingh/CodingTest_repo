@@ -15,10 +15,22 @@ class Solution4 {
     }
 }
 
+// SolutionCode -> map 활용
+class SolutionCode4 {
+    int solution (String num_str) {
+        return num_str.chars().map(c -> c - '0').sum();
+    }
+}
+
 public class SumOfStringInt {
     public static void main(String[] args) {
         Solution4 s4 = new Solution4();
+        SolutionCode4 sc4 = new SolutionCode4();
+
         System.out.println(s4.solution("123456789"));
         System.out.println(s4.solution("1000000"));
+        System.out.println();
+        System.out.println(sc4.solution("123456789"));
+        System.out.println(sc4.solution("1000000"));
     }
 }
