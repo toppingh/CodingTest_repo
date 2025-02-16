@@ -9,10 +9,22 @@ class Solution1 {
     }
 }
 
+// SolutionCode1 -> 정수로 변환 후 다시 문자열로 return
+class SolutionCode1 {
+    String solution (String n_str) {
+        return "" + Integer.parseInt(n_str);
+    }
+}
+
 public class Delete0 {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(s1.solution("0010"));
         System.out.println(s1.solution("854020"));
+        System.out.println();
+        System.out.println(sc1.solution("0010"));
+        System.out.println(sc1.solution("854020"));
     }
 }
