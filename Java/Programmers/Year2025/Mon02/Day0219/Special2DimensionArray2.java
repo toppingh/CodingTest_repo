@@ -6,15 +6,17 @@ package Java.Programmers.Year2025.Mon02.Day0219;
 
 class Solution2 {
     int solution (int[][] arr) {
-        int answer = 0;
+        int answer = 1;
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] == arr[j][i]) answer++;
+                if (arr[i][j] != arr[j][i]) {
+                    answer = 0;
+                    break;
+                }
             }
         }
-//        System.out.println(arr.length * arr.length);
-        return answer == arr.length * arr.length ? 1 : 0;
+        return answer;
     }
 }
 
