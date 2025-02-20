@@ -14,7 +14,6 @@ public class PCCE3_DivideNumber {
         for (int i = 0; i < number % 100; i++) {
             answer += number % 100;
             number /= 100;
-            System.out.println("i : " + i + " answer : " + answer + " num : " + number);
         }
         System.out.println(answer);
     }
