@@ -25,11 +25,31 @@ class Solution1 {
     }
 }
 
+// SolutionCode
+class SolutionCode1 {
+    long[] solution (int x, int n) {
+        long[] answer=  new long[n];
+        answer[0] = x;
+
+        for (int i = 1; i < n; i++) {
+            answer[i] = answer[i - 1] + x;
+        }
+
+        return answer;
+    }
+}
+
 public class NumberSpaceByX {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(Arrays.toString(s1.solution(2, 5)));
         System.out.println(Arrays.toString(s1.solution(4, 3)));
         System.out.println(Arrays.toString(s1.solution(-4, 2)));
+        System.out.println();
+        System.out.println(Arrays.toString(sc1.solution(2, 5)));
+        System.out.println(Arrays.toString(sc1.solution(4, 3)));
+        System.out.println(Arrays.toString(sc1.solution(-4, 2)));
     }
 }
