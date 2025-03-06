@@ -14,11 +14,28 @@ class Solution4 {
     }
 }
 
+// SolutionCode -> 등차수열의 합 공식 활용 => (a1 + an) / 2 * n == (b - a + 1) x (a + b) / 2
+class SolutionCode4 {
+    long solution (int a, int b) {
+        return sumAtoB (Math.min(a, b), Math.max(a, b));
+    }
+
+    long sumAtoB (long a, long b) {
+        return (b - a + 1) * (a + b) / 2;
+    }
+}
+
 public class SumBetweenTwoInt {
     public static void main(String[] args) {
         Solution4 s4 = new Solution4();
+        SolutionCode4 sc4 = new SolutionCode4();
+
         System.out.println(s4.solution(3, 5));
         System.out.println(s4.solution(3, 3));
         System.out.println(s4.solution(5, 3));
+        System.out.println();
+        System.out.println(sc4.solution(3, 5));
+        System.out.println(sc4.solution(3, 3));
+        System.out.println(sc4.solution(5, 3));
     }
 }
