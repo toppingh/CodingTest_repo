@@ -21,10 +21,28 @@ class Solution2 {
     }
 }
 
+// SolutionCode -> 0 ~ 9의 합에서 빼기
+class SolutionCode2 {
+    int solution (int[] numbers) {
+        int sum = 45; // 0 ~ 9까지의 합
+
+        for (int i : numbers) {
+            sum -= i;
+        }
+
+        return sum;
+    }
+}
+
 public class SumNumberNoExist {
     public static void main(String[] args) {
         Solution2 s2 = new Solution2();
+        SolutionCode2 sc2 = new SolutionCode2();
+
         System.out.println(s2.solution(new int[] {1, 2, 3, 4, 6, 7, 8, 0}));
         System.out.println(s2.solution(new int[] {5, 8, 4, 0, 6, 7, 9}));
+        System.out.println();
+        System.out.println(sc2.solution(new int[] {1, 2, 3, 4, 6, 7, 8, 0}));
+        System.out.println(sc2.solution(new int[] {5, 8, 4, 0, 6, 7, 9}));
     }
 }
