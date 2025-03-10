@@ -9,10 +9,28 @@ class Solution1 {
     }
 }
 
+// SolutionCode - for문 활용
+class SolutionCode1 {
+    String solution (String phone_number) {
+        char[] ch = phone_number.toCharArray();
+
+        for (int i = 0; i < ch.length - 4; i++) {
+            ch[i] = '*';
+        }
+
+        return String.valueOf(ch);
+    }
+}
+
 public class HidingPhoneNumber {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(s1.solution("01033334444"));
         System.out.println(s1.solution("027778888"));
+        System.out.println();
+        System.out.println(sc1.solution("01033334444"));
+        System.out.println(sc1.solution("027778888"));
     }
 }
