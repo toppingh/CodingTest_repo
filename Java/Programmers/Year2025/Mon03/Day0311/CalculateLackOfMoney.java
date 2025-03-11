@@ -16,9 +16,20 @@ class Solution3 {
     }
 }
 
+// SolutionCode3 -> 등차수열의 합 공식 활용
+class SolutionCode3 {
+    long solution (int price, int money, int count) {
+        return Math.max(price * (count * (count + 1) / 2) - money, 0);
+    }
+}
+
 public class CalculateLackOfMoney {
     public static void main(String[] args) {
         Solution3 s3 = new Solution3();
+        SolutionCode3 sc3 = new SolutionCode3();
+
         System.out.println(s3.solution(3, 20, 4));
+        System.out.println();
+        System.out.println(sc3.solution(3, 20, 4));
     }
 }
