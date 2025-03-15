@@ -20,10 +20,30 @@ class Solution1 {
     }
 }
 
+// SolutionCode1
+class SolutionCode1 {
+    int solution (int n) {
+        String a = "";
+
+        while (n > 0) {
+            a = (n % 3) + a;
+            n /= 3;
+        }
+        a = new StringBuilder(a).reverse().toString();
+
+        return Integer.parseInt(a, 3);
+    }
+}
+
 public class ReverseTernary {
     public static void main(String[] args) {
         Solution1 s1 = new Solution1();
+        SolutionCode1 sc1 = new SolutionCode1();
+
         System.out.println(s1.solution(45));
         System.out.println(s1.solution(125));
+        System.out.println();
+        System.out.println(sc1.solution(45));
+        System.out.println(sc1.solution(125));
     }
 }
