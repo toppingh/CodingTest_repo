@@ -10,6 +10,7 @@ class Solution1 {
 
         for (char c : s.toCharArray()) {
             if (Character.isUpperCase(c)) {
+                // z를 넘어갈 경우 순환을 위해 % 26으로 다시 A부터 시작하도록 처리
                 sb.append((char) ((c - 'A' + n) % 26 + 'A'));
             } else if (Character.isLowerCase(c)) {
                 sb.append((char) ((c - 'a' + n) % 26 + 'a'));
