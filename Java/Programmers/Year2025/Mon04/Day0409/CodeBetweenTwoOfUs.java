@@ -29,9 +29,33 @@ class Solution2 {
     }
 }
 
+// SolutionCode - while문 활용
+class SolutionCode2 {
+    String solution (String s, String skip, int index) {
+        StringBuilder sb = new StringBuilder();
+
+        for (char c : s.toCharArray()) {
+            char tmp = c;
+            int idx = 0;
+
+            while (idx < index) {
+                tmp = (tmp == 'z') ? 'a' : (char) (tmp + 1);
+                if (!skip.contains(String.valueOf(tmp))) {
+                    idx += 1;
+                }
+            }
+            sb.append(tmp);
+        }
+        return sb.toString();
+    }
+}
+
 public class CodeBetweenTwoOfUs {
     public static void main(String[] args) {
         Solution2 s2 = new Solution2();
+        SolutionCode2 sc2 = new SolutionCode2();
+
         System.out.println(s2.solution("aukks", "wbqd", 5));
+        System.out.println(sc2.solution("aukks", "wbqd", 5));
     }
 }
