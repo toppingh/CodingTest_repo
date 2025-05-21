@@ -29,6 +29,7 @@ class Solution1 {
         return sb.toString();
     }
 
+    // 인덱스 값 구분 함수
     private int getIdx(char type) {
         return switch (type) {
             case 'R' -> 0;
